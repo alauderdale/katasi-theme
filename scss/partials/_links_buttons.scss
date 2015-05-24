@@ -1,0 +1,49 @@
+a{
+	color:$primary-color;
+	&:hover{
+		text-decoration:none;
+	}
+}
+
+
+.btn{
+	border-radius:100px;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	font-family:$flourish-font-name;
+	font-weight:900;
+	padding:$baseline/2 $baseline*1.5;
+	font-size:.8em;
+	transition-duration:.3s;
+	&.btn-primary{
+		background-color:$primary-color;
+		border-color:$primary-color;
+		&:hover{
+			background-color:shade($primary-color,10%);
+			border-color:shade($primary-color,10%);		
+		}
+	}
+	&.btn-wire{
+		background:transparent;
+		border:1px solid rgba(255,255,255,.5);
+		color:white;
+		&:hover{
+			border-color:rgba(255,255,255,1);
+		}
+	}
+	&.btn-wire-primary{
+		background:transparent;
+		border:1px solid rgba(47,168,221,.5);
+		color:$primary-color;
+		&:hover{
+			border-color:$primary-color;
+		}
+	}
+	&.btn-default{
+		color:$primary-color;
+		border-color:white;
+	}
+	&.btn-lg{
+		font-size:1.2em;
+	}
+}

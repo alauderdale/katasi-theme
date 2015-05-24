@@ -1,0 +1,75 @@
+//sections
+
+
+section{
+  padding:$baseline*3 0;
+  &.invert-section{
+    background-color:$primary-color;
+    @extend %white_text;
+  }
+  &.off-white{
+    background-color:$off-white-bg-color;
+  }
+  &.icon-grid-col-6{
+    i{
+      position:relative;
+      left:29px;
+      opacity:.7;
+      @include breakpoint(md) {
+        left:0;
+        margin-bottom:$baseline/2;
+      }
+    }
+    .info-container{
+      padding-right:$baseline;
+      @include breakpoint(md) {
+        padding-right:0;
+      }
+    }
+  }
+  &.sign-up-banner{
+    background:$primary-color url(../images/sign_up_banner_baner_bg.png) center;
+  }
+  &.header-section{
+    @extend %white_text;
+    text-align:center;
+    padding-top:$baseline*2 + 98;
+    background-size:cover!important;
+    .italic{
+      text-transform:none;
+      font-style:italic;
+    }
+  }
+  &.home-section{
+    padding:$baseline*7 0;
+    padding-top:$baseline*7 + 78px ;
+      @include breakpoint(md) {
+        padding:$baseline*2 0;
+        padding-top:$baseline*2 + 78px ;
+      }
+  }
+  &.single-header-section{
+    padding:$baseline*7 0;
+    padding-top:$baseline*7 + 78px ;
+    padding-bottom:0;
+    @extend %white_text;
+    .title-wrapper{
+      background-color:rgba(0,0,0,.5);
+      padding:$baseline 0;
+      h3{
+        margin-bottom:0;
+      }
+      p{
+        margin-bottom:0;
+      }
+    }
+      @include breakpoint(md) {
+        padding:$baseline*2 0;
+        padding-top:$baseline*2 + 78px ;
+        padding-bottom:0;
+      }
+  }
+}
+
+
+

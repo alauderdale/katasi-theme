@@ -1,0 +1,118 @@
+a.team-member-thumb{
+	margin-bottom:$baseline;
+	display:block;
+	p{
+		margin-bottom:0;
+	}
+	ul{
+		font-size:.8em;
+		margin-left:14px;
+		li{
+			color:$text-color;
+		}
+	}
+	img{
+		transition-duration:.2s;
+		opacity: 0.9;
+		max-width:300px;
+	}
+	&:hover, &:focus{
+		text-decoration:none;
+		img{
+			opacity:1;
+		}
+		li,p,img{
+			text-decoration:none;
+		}
+	}
+}
+
+//jobs accordian
+
+
+#jobs-accordion{
+	margin-bottom:$baseline*3;
+	.panel{
+		background:transparent;
+		border:none;
+		border-radius:0px;
+		box-shadow:none;
+		padding: 0;
+		margin:0;
+		a{
+			&:hover,&:focus{
+				text-decoration:none;
+			}
+		}
+		.panel-heading{
+			background:transparent;
+			padding:0;
+			a{
+				display:block;
+				padding:$baseline 0;
+				padding-top:0;
+				&:focus{
+					border:none;
+					outline:none;
+				}
+				hr{
+					margin:0;
+					margin-bottom:$baseline;
+					visibility:hidden;
+					transition-duration:.3s;
+				}
+				h4{
+					margin-bottom:$baseline/4;
+				}			
+				p{
+					margin-bottom:0;
+				}
+				.close-icon{
+					font-size:3em;
+					font-family:$light-font-name;
+					margin-bottom:-30px;
+					position:relative;
+					top:-50px;
+					float: right;
+					display:inline-table;
+					@include transform(rotate(45deg));
+					transition-duration:.3s;
+					color:$primary-color;
+				}
+				&.collapsed{
+					.close-icon{
+						@include transform(rotate(0deg));
+					}
+					hr{
+						visibility:visible;
+					}
+				}
+			}
+
+		}
+		.in{
+			.panel-body{
+				background:$off-white-bg-color;
+			}
+		}
+		.panel-body{
+			padding:$baseline*2 0;
+			padding-top:$baseline*2 + 111px;
+			margin-top:-111px;
+			font-size:.9em;
+			border:none;
+			transition-duration:.3s;
+			.btn{
+				font-size:1em;
+				 @include breakpoint(md) {
+				 	position:relative;
+				 	top:-$baseline;
+				 }
+			}
+		}
+	}
+}
+
+
+
+

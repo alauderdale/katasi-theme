@@ -1,0 +1,17 @@
+.modal-default{
+	padding:$baseline*2;
+	background:white;
+	border-radius:3px;
+}
+
+.modal-sm{
+	min-width:400px;
+	  @include breakpoint(md) {
+    	min-width:0!important;
+  	}
+}
+
+.fancybox-close{
+	right:11px;
+	top:6px;
+}
