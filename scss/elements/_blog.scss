@@ -26,16 +26,26 @@
 }
 
 .fix-social{
-	width:55px;
 	&.affix{
-		top:90px;
+		position:fixed!important;
+		top:120px;
+	}
+	.share-text{
+		text-align:left;
 	}
   @include breakpoint(md) {
     position:relative;
+    .share-text{
+			text-align:left;
+		}
     &.affix{
+    	position:relative!important;
 			top:0px;
 		}
   }
 }
+
+
+
 
 

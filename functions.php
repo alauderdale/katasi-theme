@@ -36,6 +36,7 @@ function boiler_setup() {
 		'about' => __( 'Footer About Menu', 'boiler' ),
 		'support' => __( 'Footer Support Menu', 'boiler' ),
 		'contact' => __( 'Footer Contact Menu', 'boiler' ),
+		'footer-social' => __( 'Footer Social Menu', 'boiler' ),
 	) );
 
 	/**
@@ -181,3 +182,5 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/custom_post_types.php';
+
+add_filter( 'wpcf7_load_js', '__return_false' );

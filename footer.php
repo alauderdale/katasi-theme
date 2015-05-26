@@ -68,28 +68,14 @@
                   'menu_class' => 'list-unstyled footer-main-nav',
                   'items_wrap'  => '<ul id="%1$s" class="%2$s">%3$s</ul>' 
                 )); ?>
-                <ul class='social-nav-footer list-inline'>
-                  <li>
-                    <a href='#'>
-                      F
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      L
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      I
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      X
-                    </a>
-                  </li>
-                </ul>
+
+                <?php wp_nav_menu( array( 
+                  'theme_location' => 'footer-social', 
+                  'container' => false, 
+                  'menu_class' => 'social-nav-footer list-inline',
+                  'items_wrap'  => '<ul id="%1$s" class="%2$s">%3$s</ul>' 
+                )); ?>
+
               </div>
             </div>
           </div>

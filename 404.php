@@ -9,7 +9,7 @@ get_header(); ?>
 
 
 
-		<section class='inverse-section text-center page-header-section' style='background-image: url(<?php the_field('hero_background_image');?>);'>
+		<section class='header-section' style='background:#0F3B4D no-repeat scroll center top; '>
 		  <div class='container'>
 		    <div class='row'>
 		      <div class='col-sm-1'></div>
@@ -29,7 +29,7 @@ get_header(); ?>
     				<p>
 							Let's head home and try again.
 						</p>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-lg btn-primary">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-primary">
 							Take Me Home
 						</a>
 					</div>

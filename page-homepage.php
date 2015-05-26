@@ -14,15 +14,15 @@ Template Name: Homepage
 	    <div class='row'>
 	      <div class='col-lg-12'>
 	        <h1>
-	          HITTING THE BRAKE ON TEXTING AND DRIVING
+	          <?php the_field('header_title');?>
 	        </h1>
 	        <p class='lead'>
 	          <em>
-	            Creating Focused Drivers by Eliminating the Distraction at the Source.
+	            <?php the_field('header_subtext');?>
 	          </em>
 	        </p>
 	        <div class='padding-top'>
-	          <a class='btn btn-primary' href='#'>
+	          <a class='btn btn-primary fancybox fancybox.ajax' href='<?php echo esc_url( get_permalink( get_page_by_title( 'modal- signup tweet' ) ) ); ?>'>
 	            Keep our Roads Safe
 	          </a>
 	        </div>
@@ -58,7 +58,7 @@ Template Name: Homepage
       <div class='row'>
         <div class='col-lg-12'>
           <ul id='logo-slider'>
-          	<?php $postLoopOne = new WP_Query( array( 'post_type' => 'press','category_name' => 'home',) ); ?>
+          	<?php $postLoopOne = new WP_Query( array( 'post_type' => 'press','category_name' => 'home') ); ?>
             <?php while ( $postLoopOne->have_posts() ) : $postLoopOne->the_post(); ?>
             <li data-src='' data-thumb='<?php the_field('logo');?>'>
               <div class='row'>

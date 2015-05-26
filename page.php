@@ -18,6 +18,7 @@ get_header(); ?>
 		<?php get_template_part( 'content', 'page' ); ?>
 
 	<?php endwhile; // end of the loop. ?>
+	<?php get_template_part( 'content', 'sign_up' ); ?>
 
 
 <?php get_footer(); ?>

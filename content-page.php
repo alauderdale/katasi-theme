@@ -1,11 +1,3 @@
-<?php
-/**
- * The template used for displaying page content in page.php
- *
- * @package boiler
- */
-?>
-
 <section>
   <div class='container'>
     <div class='row'>

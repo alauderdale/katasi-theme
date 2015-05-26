@@ -13,7 +13,7 @@
       </div>
       <div class='col-sm-6'>
         <div class='pull-left margin-right'>
-          <a class='btn btn-default margin-bottom' href='#'>
+          <a class='btn btn-default margin-bottom fancybox fancybox.ajax' href='<?php echo esc_url( get_permalink( get_page_by_title( 'modal- signup tweet' ) ) ); ?>'>
             SIGN UP
           </a>
         </div>

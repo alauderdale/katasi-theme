@@ -4,60 +4,65 @@
  */
 ?>
 
-<article>
-	<header>
-		<h1><?php the_title(); ?></h1>
 
-		<div class="entry-meta">
-			<?php boiler_posted_on(); ?>
-		</div>
-	</header>
+<style>
+  .main-nav{
+  	background-color:rgba(0,0,0,.5);
+  }
+</style>
+<section class='single-header-section' style='background: #0F3B4D url(<?php the_field('background_image');?>) no-repeat scroll center center; background-size:cover;'>
+  <div class='title-wrapper'>
+    <div class='container'>
+      <div class='row'>
+      	<div class='col-md-1'></div>
+        <div class='col-md-10'>
+          <h3>
+            <?php the_title(); ?>
+          </h3>
+          <p>
+            posted on <?php the_date();?> by <?php the_author();?> in  <?php echo get_the_category_list(','); ?>
+          </p>
+        </div>
+        <div class='col-md-1'></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class='blog blog-single'>
+  <div class='container'>
+  	<div class="row">
+  		<div class='col-md-1'></div>
+  		<div class='col-md-10'>
+		    <div class='row'>
+		      <div class='col-md-11 col-md-push-1'>
+		        <div class='row'>
+		          <div class='col-md-10'>
+		            <?php the_content(); ?>
+		          </div>
+		          <div class='col-md-2'></div>
+		        </div>
+		      </div>
+		      <div class='col-md-1 col-md-pull-11'>
+		        <div class='social-btn-group'>
+		          <div class='fix-social affix' data-offset-top='350' data-offset-bottom='650' data-spy='affix'>
+		            <h6 class='share-text extra-light-text-color'>
+		              SHARE
+		            </h6>
+		            <div aria-label='...' class='btn-group btn-group-vertical' role='group'>
+		              <a class='btn btn-default' href='#'>
+		                F
+		              </a>
+		              <a class='btn btn-default' href='#'>
+		                L
+		              </a>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+	    </div>
+	    <div class='col-md-1'></div>
+  </div>
+</section>
 
-	<div>
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'boiler' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div>
 
-	<footer>
-		<?php
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'boiler' ) );
-
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'boiler' ) );
-
-			if ( ! boiler_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'boiler' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'boiler' );
-				}
-
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'boiler' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'boiler' );
-				}
-
-			} // end check for categories on this blog
-
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink(),
-				the_title_attribute( 'echo=0' )
-			);
-		?>
-
-		<?php edit_post_link( __( 'Edit', 'boiler' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer>
-</article>
