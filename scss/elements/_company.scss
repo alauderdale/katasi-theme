@@ -1,11 +1,11 @@
-a.team-member-thumb{
+.team-member-thumb{
 	margin-bottom:$baseline;
 	display:block;
 	p{
 		margin-bottom:0;
 	}
 	ul{
-		font-size:.8em;
+		font-size:.8em!important;
 		margin-left:14px;
 		li{
 			color:$text-color;

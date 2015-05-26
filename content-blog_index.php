@@ -1,10 +1,12 @@
+
+
 <section class='blog blog-index'>
   <div class='container'>
     <div class='row'>
       <div class='col-md-12'>
       	<?php 
 					$temp = $wp_query; $wp_query= null;
-					$wp_query = new WP_Query(); $wp_query->query('showposts=5' . '&paged='.$paged);
+					$wp_query = new WP_Query(array( 'post_type' => 'post')); $wp_query->query('showposts=5' . '&paged='.$paged);
 					while ($wp_query->have_posts()) : $wp_query->the_post(); 
 				?>
         	<?php get_template_part( 'content', 'post_thumb' ); ?>
@@ -44,3 +46,4 @@
     </div>
   </div>
 </section>
+

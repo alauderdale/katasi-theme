@@ -1,7 +1,7 @@
 <section>
   <div class='container'>
     <div class='row'>
-    	<?php $postLoopOne = new WP_Query( array( 'post_type' => 'press','category_name' => 'featured',) ); ?>
+    	<?php $postLoopOne = new WP_Query( array( 'post_type' => 'press','category_name' => 'featured') ); ?>
             <?php while ( $postLoopOne->have_posts() ) : $postLoopOne->the_post(); ?>
       <div class='col-md-4'>
         <div class='padded'>

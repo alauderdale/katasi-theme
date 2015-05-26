@@ -55,7 +55,7 @@
       <?php $postLoopOne = new WP_Query( array( 'post_type' => 'person') ); ?>
             <?php while ( $postLoopOne->have_posts() ) : $postLoopOne->the_post(); ?>
       <div class='col-md-4 col-sm-6'>
-        <a class='team-member-thumb' href='#'>
+        <div class='team-member-thumb'>
           <div class='padded'>
             <img class='img-responsive margin-bottom' src='<?php the_field('member_image');?>'>
             <p class='extra-bold-font-name no-margin-bottom'>
@@ -67,7 +67,7 @@
             <div class='divider-sm'></div>
             <?php the_content();?>
           </div>
-        </a>
+        </div>
       </div>
       <?php endwhile; // end of the loop. ?>
     </div>

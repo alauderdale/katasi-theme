@@ -68,7 +68,7 @@ get_header(); ?>
 </section>
 
 
-
+<?php get_template_part( 'content', 'sign_up_inner' ); ?>
 
 
 

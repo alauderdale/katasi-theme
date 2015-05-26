@@ -11,8 +11,7 @@ Template Name: Blog
 
 <?php get_template_part( 'content', 'blog_index' ); ?>
 
-<?php get_template_part( 'content', 'sign_up' ); ?>
-
+<?php get_template_part( 'content', 'sign_up_inner' ); ?>
 
 
 
