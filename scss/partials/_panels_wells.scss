@@ -12,9 +12,14 @@
 		}
 		margin-bottom:$baseline;
 		@include breakpoint(md) {
-		.btn{
-			padding:10px 12px;
-		}
+			.btn{
+				padding:10px 12px;
+				width:100%;
+				display:block;
+				.md{
+					display:none;
+				}
+			}
 		}
 	}
 }

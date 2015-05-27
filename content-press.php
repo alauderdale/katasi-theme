@@ -38,24 +38,24 @@
 <section class='off-white'>
   <div class='container'>
     <div class='row'>
-    	<?php $postLoopTwo = new WP_Query( array( 'post_type' => 'press','category_name' => 'featured',) ); ?>
+    	<?php $postLoopTwo = new WP_Query( array( 'post_type' => 'press') ); ?>
             <?php while ( $postLoopTwo->have_posts() ) : $postLoopTwo->the_post(); ?>
 	      <div class='col-md-6'>
 	        <div class='card card-press'>
 	          <img class='img-responsive margin-bottom margin-auto' src='<?php the_field('logo');?>' width='167px'>
-	          <p>
+	          <p class="press-title">
 	            <?php the_field('article_title');?>
 	          </p>
 	          <hr>
 	          <div class='row'>
-	            <div class='col-xs-6'>
+	            <div class='col-xs-5'>
 	              <h6 class='extra-light-text-color'>
 	                <?php the_field('article_release_date');?>
 	              </h6>
 	            </div>
-	            <div class='col-xs-6'>
+	            <div class='col-xs-7'>
 	              <a class='btn btn-wire-primary pull-right' href='<?php the_field('article_link');?>' target='_blank'>
-	                View Article
+	                View Story
 	                <i class='md md-launch'></i>
 	              </a>
 	            </div>

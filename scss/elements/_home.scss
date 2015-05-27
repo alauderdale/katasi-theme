@@ -72,31 +72,35 @@ section{
 		overflow:inherit;
 	}
 
+	.slider-featured-img{
+		box-shadow:0 2px 20px 0 rgba(0,0,0,.42);
+	}
+
+
 	ul.lSPager{
 		position:relative;
 		top:-115px;
 		height:50px;
 		overflow:visible!important;
 		display:inline-block;
-		@include breakpoint(md) {
+		@include breakpoint(lg) {
 			top:-103px;
 		}
+		@include breakpoint(md) {
+			top:-93px;
+		}
 		@include breakpoint(sm) {
-			top:-87px;
+			top:-72px;
 		}
 		li{
 			opacity:.33;
 			padding-bottom:$baseline*2;
 			&.active{
 				opacity:1;
-				background:url(../images/slider_active.png) no-repeat 54px bottom;
-				@include breakpoint(sm) {
-					background:none;
-				}
+				background:url(../images/slider_active.png) no-repeat bottom center;
+				// @include breakpoint(xs) {
+				// 	background-position:bottom center;
+				// }
 			}
 		}
 	}
-
-		.slider-featured-img{
-			box-shadow:0 2px 20px 0 rgba(0,0,0,.42);
-		}

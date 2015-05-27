@@ -10,6 +10,7 @@ $(document).ready(function(){
         width: "100%",
         height: 870,
         autoSize: false,
+        wrapCSS: "fb-video",
         helpers: {
             media: {}
         }
@@ -56,13 +57,14 @@ $(document).ready(function(){
 
        $('#logo-slider').lightSlider({
         gallery:true,
+        adaptiveHeight:true,
         item:1,
         loop:true,
         mode:'fade',
         slideMargin:30,
-        thumbMargin:10,
-        thumbItem:5,
-        enableDrag: false,
+        thumbMargin:0,
+        thumbItem:7,
+        enableDrag: true,
         keyPress:true,
         controls:false,
         currentPagerPosition:'middle',

@@ -9,6 +9,14 @@ Template Name: Homepage
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
+  <style type="text/css">
+
+  .main-nav{
+    background-color:rgba(0,0,0,.5);
+  }
+
+  </style>
+
 	<section class='invert-section text-center home-video home-section'>
 	  <div class='container'>
 	    <div class='row'>
@@ -23,7 +31,7 @@ Template Name: Homepage
 	        </p>
 	        <div class='padding-top'>
 	          <a class='btn btn-primary fancybox fancybox.ajax' href='<?php echo esc_url( get_permalink( get_page_by_title( 'modal- signup tweet' ) ) ); ?>'>
-	            Keep our Roads Safe
+	            Join the Groovement
 	          </a>
 	        </div>
 	        <a class='down-link' href='#ssinfo'>
@@ -73,7 +81,7 @@ Template Name: Homepage
                       <?php the_field('quote');?>
                     </p>
                     <a href="<?php the_field('article_link');?>" class='btn btn-wire-primary' target="_blank">
-                      View the article
+                      View Story
                       <i class='md md-launch'></i>
                     </a>
                   </div>
@@ -100,7 +108,7 @@ Template Name: Homepage
           <p>
             <?php the_field('game_subtext');?>
           </p>
-          <a class='btn btn-primary fancybox fancybox.ajax' href='<?php the_field('game_invite_link');?>'>REQUEST AN INVITE</a>
+          <a class='btn btn-primary fancybox fancybox.ajax' href='<?php the_field('game_invite_link');?>'>Add to waiting list</a>
           <img class='double-padding-top img-responsive margin-auto' src='<?php the_field('game_image');?>'>
         </div>
       </div>

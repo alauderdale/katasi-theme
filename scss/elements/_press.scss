@@ -1,0 +1,6 @@
+p.press-title{
+	min-height:63px;
+		@include breakpoint(md) {
+			min-height:0;	
+		}
+}

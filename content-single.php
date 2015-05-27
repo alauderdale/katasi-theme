@@ -4,6 +4,16 @@
  */
 ?>
 
+<!-- permalink encoding -->
+
+ <?php
+ob_start();
+the_permalink();
+$permalink = ob_get_clean();
+?>
+
+<!-- end -->
+
 
 <style>
   .main-nav{
@@ -49,10 +59,10 @@
 		              SHARE
 		            </h6>
 		            <div aria-label='...' class='btn-group btn-group-vertical' role='group'>
-		              <a class='btn btn-default' href='#'>
+		              <a class='btn btn-default'  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php echo (urlencode($permalink)); ?>', 'newwindow', 'width=500, height=250');  return false;"   href='#'>
 		                F
 		              </a>
-		              <a class='btn btn-default' href='#'>
+		              <a class='btn btn-default' target="_blank"  onclick="window.open('http://twitter.com/share?url=<?php echo (urlencode($permalink)); ?>&text=<?php the_title()?>', 'newwindow', 'width=300, height=250');  return false;" href='#'>
 		                L
 		              </a>
 		            </div>

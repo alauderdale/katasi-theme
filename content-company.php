@@ -58,7 +58,7 @@
         <div class='team-member-thumb'>
           <div class='padded'>
             <img class='img-responsive margin-bottom' src='<?php the_field('member_image');?>'>
-            <p class='extra-bold-font-name no-margin-bottom'>
+            <p class='extra-bold-font-name no-margin-bottom text-color'>
               <?php the_title();?>
               <span class='extra-light-text-color'>
                 <?php the_field('title');?>
