@@ -56,17 +56,16 @@
             <?php while ( $postLoopOne->have_posts() ) : $postLoopOne->the_post(); ?>
       <div class='col-md-4 col-sm-6'>
         <div class='team-member-thumb'>
-          <div class='padded'>
-            <img class='img-responsive margin-bottom' src='<?php the_field('member_image');?>'>
-            <p class='extra-bold-font-name no-margin-bottom text-color'>
-              <?php the_title();?>
-              <span class='extra-light-text-color'>
-                <?php the_field('title');?>
-              </span>
-            </p>
-            <div class='divider-sm'></div>
-            <?php the_content();?>
-          </div>
+          <img class='img-responsive margin-bottom' src='<?php the_field('member_image');?>'>
+          <p class='extra-bold-font-name no-margin-bottom text-color'>
+            <?php the_title();?>
+            </br>
+            <span class='extra-light-text-color'>
+              <?php the_field('title');?>
+            </span>
+          </p>
+          <div class='divider-sm'></div>
+          <?php the_content();?>
         </div>
       </div>
       <?php endwhile; // end of the loop. ?>

@@ -6,12 +6,12 @@
       </a>
     </div>
     <div class='form-group'>
-      <a class='btn social-font-name btn-facebook btn-social' href='https://www.facebook.com/KatasiLLC'>
+      <a class='btn social-font-name btn-facebook btn-social' href='https://www.facebook.com/KatasiLLC' target="_blank">
         F
       </a>
     </div>
     <div class='form-group'>
-      <a class='btn social-font-name btn-twitter btn-social' href='https://twitter.com/katasidriver'>
+      <a class='btn social-font-name btn-twitter btn-social' href='https://twitter.com/katasidriver' target="_blank">
         L
       </a>
     </div>

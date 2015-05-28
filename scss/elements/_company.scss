@@ -1,6 +1,5 @@
 .team-member-thumb{
-	margin-bottom:$baseline;
-	display:block;
+	margin-top:$baseline*2;
 	p{
 		margin-bottom:0;
 	}
@@ -111,6 +110,15 @@
 			}
 		}
 	}
+}
+
+
+img.alert-img{
+	position:relative;
+	top:40px;
+	 @include breakpoint(md) {
+	 	top:0
+	 }
 }
 
 

@@ -71,7 +71,7 @@ Template Name: Homepage
             <li data-src='' data-thumb='<?php the_field('logo');?>'>
               <div class='row'>
                 <div class='col-sm-6'>
-                  <a class='fb-video' href='<?php the_field('video_url');?>'>
+                  <a class='fb-video' href='<?php the_field('video_url');?>' target="_blank">
                     <img class='img-responsive margin-bottom margin-auto slider-featured-img' src='<?php the_field('video_thumbnail');?>'>
                   </a>
                 </div>

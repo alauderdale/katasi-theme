@@ -18,6 +18,8 @@ $(document).ready(function(){
 
 	$('.tooltip-up').tooltip({html:true});
 
+    
+
 
 //smooth scroll
 
@@ -55,7 +57,7 @@ $(document).ready(function(){
    //slider
 
 
-       $('#logo-slider').lightSlider({
+    $('#logo-slider').lightSlider({
         gallery:true,
         adaptiveHeight:true,
         item:1,
@@ -77,4 +79,17 @@ $(document).ready(function(){
 
 
 
+
+
+
+
+});
+
+
+$(window).bind("load", function() {
+    $('.lSSlideOuter .lSPager.lSGallery li.active').removeClass('active');
+    $('.lSSlideOuter .lSPager.lSGallery li:nth-child(4)').addClass('active');
+
+    $('.lslide').removeClass('active');
+    $('.lslide:nth-child(4)').addClass('active');
 });
