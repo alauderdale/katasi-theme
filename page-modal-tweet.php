@@ -44,7 +44,10 @@ if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
   <form>
       <div class='form-group'>
         <a class="btn btn-block btn-primary fancybox fancybox.ajax" href="<?php echo esc_url( get_permalink( get_page_by_title( 'modal- signup form' ) ) ); ?>" onclick="window.open('http://twitter.com/share?url=<?php echo (urlencode($permalink)); ?>&text=<?php the_field('tweet_text')?>', 'newwindow', 'width=300, height=250');  $.fancybox.close();  return false;">
-            tweet & Sign up
+            tweet 
+            <span class="hidden-xs">
+              & Sign up
+            </span>
         </a>
     </div>
     <div class='form-group'>

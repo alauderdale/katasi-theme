@@ -23,6 +23,7 @@
     </div>
   </div>
 </section>
+<div class="page-href" id="link-company"></div>
 <section id='sscompany'>
   <div class='container'>
     <div class='row'>
@@ -42,7 +43,8 @@
 <div class='container'>
   <hr>
 </div>
-<section id='ssteam'>
+<div class="page-href" id="link-team"></div>
+<section id="ssteam">
   <div class='container'>
     <div class='row'>
       <div class='col-md-12 text-center'>
@@ -76,7 +78,7 @@
   <hr>
 </div>
 <?php while ( have_posts() ) : the_post(); ?>
-<section id='ssjobs'>
+<section>
   <div class='container'>
     <div class='row'>
       <div class='col-md-6'>
@@ -100,7 +102,8 @@
 <div class='container'>
   <hr>
 </div>
-<section id='team'>
+<div class="page-href" id="link-jobs"></div>
+<section id='ssjobs'>
   <div class='container'>
     <div class='row'>
       <div class='col-md-12 text-center'>
